@@ -6,16 +6,31 @@
 //
 
 import SwiftUI
+import SwiftyDropbox
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+  @State var isShown = false
+  
+  var body: some View {
+    VStack {
+      Text("Connect to Dropbox")
+        .padding()
+      
+      Button(action: {
+        self.isShown.toggle()
+      }) {
+        Text("Sign in")
+      }
+      DropboxView(isShown: $isShown)
+        .padding()
     }
+  }
+  
+  
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
