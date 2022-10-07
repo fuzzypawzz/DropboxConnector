@@ -14,7 +14,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>db-tu4wkqwurvnusog</string>
+				<string>db-mockAppKey</string>
 			</array>
 		</dict>
 	</array>
